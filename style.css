@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+
+html,body {
+  margin: 0;
+  background: #ECEBE8;
+}
+.container {
+  width: 100vw;
+  margin: 0 auto 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Pontano Sans', sans-serif;
+
+}
+.playercontainer {
+  display: flex;
+  height: 25vh;
+  height: 0;
+  background: black;
+  transition: all 200ms ease-out;
+}
+#player {
+  flex: 1;
+  height: 100%;
+  margin-bottom: 0;
+  box-shadow: 0 0 6px rgba(0,0,0,.24);
+}
+#inputArea{
+  height: 3em;
+  display: flex;
+  border-top: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.12);
+  padding: .64em;
+  background: #903F45;
+  box-shadow: 0 0 16px rgba(0,0,0,.34);
+}
+#user_text, #user_add {
+  flex: 1;
+  outline: none;
+  border: none;
+  background: none;
+}
+#user_add {
+  border-left: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.24);
+}
+#user_text {
+  flex: 2;
+  padding: 0 2em 0 2em;
+}
+#listArea {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  background: White;
+  border: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.18);
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,.24);
+  color: rgba(0,0,0,.75);
+}
+#listArea li {
+  list-style: none;
+  line-height: 4.48em;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: rgba(0,0,0,.12);
+  padding: 0 1.64em 0 1.64em;
+}
+.listcontainer {
+  flex: 1;
+  overflow-y: scroll;
+  padding-top: .64em;
+}
+.listcontainer::-webkit-scrollbar {
+  display: none;
+}
+.innerInputContainer {
+  display: flex;
+  flex: 1;
+  background: white;
+  color: white;
+  border-radius: 4px;
+  padding: .24em;
+  box-shadow: 0px 0 15px rgba(0,0,0,.24);
+  color: rgba(0,0,0,.85);
+}
+button,input {
+  color: inherit;
+}
+#listArea, #player, .innerInputContainer {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+}
+#info {
+  text-align: center;
+  overflow: hidden;
+}
