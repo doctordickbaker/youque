@@ -1,3 +1,4 @@
+
 var videoList = [""];
 var currentVid = 1;
 var info = document.getElementById("info");
@@ -9,7 +10,7 @@ var urlRequired = "https://www.youtube.com/watch?v=";
 var hasplayed = 0;  /// This value just keeps track of whether the player has worked.  Its main purpose is to prevent the add button from triggering auto play after the first video.
 
 function startVideo(){
-  player.loadVideoById(videoList[currentVid].slice(32));
+  player.loadVideoById(videoList[currentVid]);
   info.style.height = 0;
   pc.style.height =  "30vh";
 }
@@ -33,8 +34,8 @@ function refresh(current){
 
 //// Button for adding new videos to playlist
 user_add.onclick = function(){
-  if(user_text.value.slice(0,32) === urlRequired){
-    videoList.push(user_text.value);
+  if(user_text.value.slice(0,32) === urlRequired || user_text.value.slice(0,-11) === "https://youtu.be/"){
+    videoList.push(user_text.value.slice(-11));
     refresh(videoList.length - 1);
     user_text.value = "";
     
@@ -43,9 +44,7 @@ user_add.onclick = function(){
   }
 }
   else {
-    console.log("EE - Not a valid Youtube URL");  ///////report error if invalid url
-  }
-}
+    console.log("EE - Not a valid Youtube URL");  ///////report error if invalid
 
 //// visually hints which video is currently playing
 function highlightActiveEntry(){

@@ -67,6 +67,7 @@ html,body {
 #listArea li {
   list-style: none;
   line-height: 4.48em;
+  font-size: .75em;
   border-bottom: solid;
   border-width: 1px;
   border-color: rgba(0,0,0,.12);
